@@ -1,0 +1,11 @@
+<div class="sidebar-view-subreddit">
+    <div style="color: black; font-weight: bold">Browse Subreddits</div>
+    <hr />
+    <span *ngFor="let subreddit of subreddits;let i = index" style="margin-bottom:10px ;" >
+        <span class="subreddit-text" ><span style="margin-right:10px ;">{{i+1}}</span><span><img class="icon" src="https://styles.redditmedia.com/t5_2qgzy/styles/communityIcon_rvt3zjh1fc551.png"></span> <a class="textinside" href="/view-subreddit/{{subreddit._id}}">{{subreddit.name}}</a></span>
+        
+    </span>
+    <div style="text-align: center" *ngIf="displayViewAll" class="btnCreatePost">
+        <a style="font-weight: bold;color: white; text-decoration: none;" routerLink="/list-subreddits" >View All</a>
+    </div>
+</div>
